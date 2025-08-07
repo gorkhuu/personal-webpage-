@@ -16,33 +16,35 @@
         /* Custom styles */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* A light gray background */
-            color: #1f2937; /* Dark gray text for better readability */
+            background-color: #f8fafc;
+            color: #1f2937;
         }
-        /* Style for the hero section with the background image */
+
+        /* Updated hero section background image */
         .hero-section {
-            background-image: url('https://i.pinimg.com/736x/8c/98/de/8c98de3b3d428e273b565017a12308c1.jpg');
+            background-image: url('https://i.pinimg.com/736x/88/f6/dc/88f6dc33512c72621e1f83fc7c27fa2b.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
-        /* A semi-transparent overlay for the hero section to make text more readable */
+
         .hero-overlay {
             background-color: rgba(0, 0, 0, 0.5);
         }
-        /* Styling for section titles */
+
         .section-title {
-            border-bottom: 3px solid #3b82f6; /* Blue accent color */
+            border-bottom: 3px solid #3b82f6;
             padding-bottom: 0.5rem;
             display: inline-block;
         }
-        /* Card styling for projects and education */
+
         .card {
             background-color: #ffffff;
             border-radius: 0.75rem;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -134,7 +136,7 @@
                     <i class="fab fa-python fa-3x text-blue-500 mb-2"></i>
                     <p class="font-semibold">Python</p>
                 </div>
-                 <div class="card p-4 text-center">
+                <div class="card p-4 text-center">
                     <i class="fas fa-c fa-3x text-blue-500 mb-2"></i>
                     <p class="font-semibold">C++</p>
                 </div>
@@ -162,7 +164,7 @@
                     <i class="fas fa-network-wired fa-3x text-gray-700 mb-2"></i>
                     <p class="font-semibold">Networking</p>
                 </div>
-                 <div class="card p-4 text-center">
+                <div class="card p-4 text-center">
                     <i class="fas fa-shield-halved fa-3x text-red-500 mb-2"></i>
                     <p class="font-semibold">Cybersecurity</p>
                 </div>
@@ -173,7 +175,7 @@
         <section id="projects" class="mb-16 scroll-mt-20">
             <h2 class="section-title text-3xl font-bold mb-8">Projects</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1 Card -->
+                <!-- Project 1 -->
                 <div class="card p-6">
                     <h3 class="text-xl font-bold text-blue-600 mb-2">E-commerce Website</h3>
                     <p class="text-gray-700 mb-4">Developed a fully functional e-commerce website using React, HTML, and CSS. The project included user authentication, a dynamic product catalog, and a complete shopping cart feature. Collaborated within a team of three to successfully meet all project deadlines.</p>
@@ -183,11 +185,11 @@
                         <span class="bg-sky-100 text-sky-800 text-sm font-medium px-2.5 py-0.5 rounded">CSS</span>
                     </div>
                 </div>
-                <!-- Project 2 Card -->
+                <!-- Project 2 -->
                 <div class="card p-6">
                     <h3 class="text-xl font-bold text-blue-600 mb-2">Network Security Simulation</h3>
                     <p class="text-gray-700 mb-4">Designed and implemented a comprehensive network security simulation using Packet Tracer. This personal project involved configuring firewalls, VPNs, and intrusion detection systems to create a secure network environment. I also documented all security policies and provided recommendations.</p>
-                     <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2">
                         <span class="bg-gray-100 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Packet Tracer</span>
                         <span class="bg-red-100 text-red-800 text-sm font-medium px-2.5 py-0.5 rounded">Security</span>
                     </div>
@@ -222,8 +224,8 @@
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // JavaScript for mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -231,14 +233,12 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
-                // Close mobile menu on link click
                 if (!mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
                 }
