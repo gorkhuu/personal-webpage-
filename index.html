@@ -1,250 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kritika Thakur - Portfolio</title>
-    <!-- Tailwind CSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter for a clean, modern look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        /* Custom styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: #1f2937;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kritika Thakur - Portfolio</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"/>
 
-        /* Updated hero section background image */
-        .hero-section {
-            background-image: url('https://i.pinimg.com/736x/88/f6/dc/88f6dc33512c72621e1f83fc7c27fa2b.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  
+  <!-- Animate on Scroll (AOS) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #1f2937;
+    }
 
-        .section-title {
-            border-bottom: 3px solid #3b82f6;
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
+    .hero-section {
+      background-image: url('https://i.pinimg.com/736x/da/8f/36/da8f36f52bbcc34b2c984eb247cdd540.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
 
-        .card {
-            background-color: #ffffff;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-        }
-    </style>
+    .section-title {
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header and Navigation Bar -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-blue-600">Kritika Thakur</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
-                <a href="#education" class="text-gray-600 hover:text-blue-600 transition">Education</a>
-                <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
-                <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none">
-                <i class="fas fa-bars fa-lg"></i>
-            </button>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
-            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
-            <a href="#education" class="block py-2 text-gray-600 hover:text-blue-600">Education</a>
-            <a href="#skills" class="block py-2 text-gray-600 hover:text-blue-600">Skills</a>
-            <a href="#projects" class="block py-2 text-gray-600 hover:text-blue-600">Projects</a>
-            <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
-        </div>
-    </header>
+  <!-- Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-blue-600">Kritika Thakur</a>
+      <div class="hidden md:flex space-x-6">
+        <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+        <a href="#education" class="text-gray-600 hover:text-blue-600 transition">Education</a>
+        <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
+        <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+      <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
+      <a href="#education" class="block py-2 text-gray-600 hover:text-blue-600">Education</a>
+      <a href="#skills" class="block py-2 text-gray-600 hover:text-blue-600">Skills</a>
+      <a href="#projects" class="block py-2 text-gray-600 hover:text-blue-600">Projects</a>
+      <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section text-white">
-        <div class="hero-overlay w-full h-full">
-            <div class="container mx-auto flex flex-col items-center justify-center h-screen text-center px-6">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Kritika Thakur</h1>
-                <p class="text-lg md:text-2xl mb-8">M.Tech Research Scholar at IIT Mandi | Information Technology Enthusiast</p>
-                <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
-                    Learn More About Me
-                </a>
-            </div>
-        </div>
+  <!-- Hero Section -->
+  <section class="hero-section text-white">
+    <div class="hero-overlay w-full h-full">
+      <div class="container mx-auto flex flex-col items-center justify-center h-screen text-center px-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-down">Kritika Thakur</h1>
+        <p class="text-lg md:text-2xl mb-8" data-aos="fade-up">M.Tech Research Scholar at IIT Mandi | IT Enthusiast</p>
+        <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300" data-aos="zoom-in">
+          Learn More About Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-12 space-y-24">
+
+    <!-- About -->
+    <section id="about" class="scroll-mt-20 bg-[#f1f5f9] p-6 rounded-lg" data-aos="fade-up">
+      <h2 class="section-title text-3xl font-bold mb-6">About Me</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        I am a dedicated and passionate Information Technology student with a strong academic background and a love for tackling new challenges. My objective is to leverage my skills in a dynamic environment, contributing to innovative projects while gaining practical, hands-on experience. I am currently pursuing an M.Tech in TCS at the prestigious Indian Institute of Technology, Mandi.
+      </p>
     </section>
 
-    <!-- Main Content Wrapper -->
-    <main class="container mx-auto px-6 py-12">
-
-        <!-- About Me Section -->
-        <section id="about" class="mb-16 scroll-mt-20">
-            <h2 class="section-title text-3xl font-bold mb-8">About Me</h2>
-            <p class="text-lg text-gray-700 leading-relaxed">
-                I am a dedicated and passionate Information Technology student with a strong academic background and a love for tackling new challenges. My objective is to leverage my skills in a dynamic environment, contributing to innovative projects while gaining practical, hands-on experience. I am currently pursuing an M.Tech in TCS at the prestigious Indian Institute of Technology, Mandi, where I am deepening my expertise and research capabilities.
-            </p>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="mb-16 scroll-mt-20">
-            <h2 class="section-title text-3xl font-bold mb-8">Education</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- M.Tech Card -->
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold text-blue-600 mb-2">Master of Technology (M.Tech) - Research</h3>
-                    <p class="font-semibold text-gray-800 mb-1">Indian Institute of Technology (IIT), Mandi</p>
-                    <p class="text-gray-600 mb-2">Specialization: TCS</p>
-                    <p class="text-gray-500">Currently Pursuing</p>
-                </div>
-                <!-- B.Tech Card -->
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold text-blue-600 mb-2">Bachelor of Technology - Information Technology</h3>
-                    <p class="font-semibold text-gray-800 mb-1">University Institute of Technology, HPU Shimla</p>
-                    <p class="text-gray-600 mb-2">Shimla, Himachal Pradesh</p>
-                    <p class="text-gray-500">Graduated: August 2024</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="mb-16 scroll-mt-20">
-            <h2 class="section-title text-3xl font-bold mb-8">Technical Skills</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <div class="card p-4 text-center">
-                    <i class="fab fa-java fa-3x text-blue-500 mb-2"></i>
-                    <p class="font-semibold">Java</p>
-                </div>
-                <div class="card p-4 text-center">
-                    <i class="fab fa-python fa-3x text-blue-500 mb-2"></i>
-                    <p class="font-semibold">Python</p>
-                </div>
-                <div class="card p-4 text-center">
-                    <i class="fas fa-c fa-3x text-blue-500 mb-2"></i>
-                    <p class="font-semibold">C++</p>
-                </div>
-                <div class="card p-4 text-center">
-                    <i class="fab fa-html5 fa-3x text-orange-500 mb-2"></i>
-                    <p class="font-semibold">HTML</p>
-                </div>
-                <div class="card p-4 text-center">
-                    <i class="fab fa-css3-alt fa-3x text-blue-500 mb-2"></i>
-                    <p class="font-semibold">CSS</p>
-                </div>
-                <div class="card p-4 text-center">
-                    <i class="fab fa-js-square fa-3x text-yellow-500 mb-2"></i>
-                    <p class="font-semibold">JavaScript</p>
-                </div>
-                <div class="card p-4 text-center">
-                    <i class="fab fa-react fa-3x text-cyan-500 mb-2"></i>
-                    <p class="font-semibold">React</p>
-                </div>
-                <div class="card p-4 text-center">
-                    <i class="fas fa-database fa-3x text-green-500 mb-2"></i>
-                    <p class="font-semibold">SQL/MySQL</p>
-                </div>
-                <div class="card p-4 text-center">
-                    <i class="fas fa-network-wired fa-3x text-gray-700 mb-2"></i>
-                    <p class="font-semibold">Networking</p>
-                </div>
-                <div class="card p-4 text-center">
-                    <i class="fas fa-shield-halved fa-3x text-red-500 mb-2"></i>
-                    <p class="font-semibold">Cybersecurity</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="mb-16 scroll-mt-20">
-            <h2 class="section-title text-3xl font-bold mb-8">Projects</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1 -->
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold text-blue-600 mb-2">E-commerce Website</h3>
-                    <p class="text-gray-700 mb-4">Developed a fully functional e-commerce website using React, HTML, and CSS. The project included user authentication, a dynamic product catalog, and a complete shopping cart feature. Collaborated within a team of three to successfully meet all project deadlines.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">React</span>
-                        <span class="bg-orange-100 text-orange-800 text-sm font-medium px-2.5 py-0.5 rounded">HTML</span>
-                        <span class="bg-sky-100 text-sky-800 text-sm font-medium px-2.5 py-0.5 rounded">CSS</span>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold text-blue-600 mb-2">Network Security Simulation</h3>
-                    <p class="text-gray-700 mb-4">Designed and implemented a comprehensive network security simulation using Packet Tracer. This personal project involved configuring firewalls, VPNs, and intrusion detection systems to create a secure network environment. I also documented all security policies and provided recommendations.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-100 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Packet Tracer</span>
-                        <span class="bg-red-100 text-red-800 text-sm font-medium px-2.5 py-0.5 rounded">Security</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="scroll-mt-20">
-            <h2 class="section-title text-3xl font-bold mb-8">Get In Touch</h2>
-            <div class="card p-8 text-center">
-                <p class="text-lg text-gray-700 mb-6">I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out to me.</p>
-                <div class="flex justify-center items-center space-x-6">
-                    <a href="mailto:kittykk1427@gmail.com" class="flex items-center text-gray-600 hover:text-blue-600 transition">
-                        <i class="fas fa-envelope fa-lg mr-2"></i>
-                        <span>ki******7@gmail.com</span>
-                    </a>
-                    <a href="tel:+918278714266" class="flex items-center text-gray-600 hover:text-blue-600 transition">
-                        <i class="fas fa-phone fa-lg mr-2"></i>
-                        <span>+91 82*******6</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-16">
-        <div class="container mx-auto px-6 py-4 text-center">
-            <p>&copy; 2024 Kritika Thakur. All Rights Reserved.</p>
+    <!-- Education -->
+    <section id="education" class="scroll-mt-20 bg-[#e2f0fb] p-6 rounded-lg" data-aos="fade-up">
+      <h2 class="section-title text-3xl font-bold mb-6">Education</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card p-6">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">M.Tech - Research</h3>
+          <p class="font-semibold text-gray-800 mb-1">IIT Mandi</p>
+          <p class="text-gray-600 mb-2">Specialization: TCS</p>
+          <p class="text-gray-500">Currently Pursuing</p>
         </div>
-    </footer>
+        <div class="card p-6">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">B.Tech - IT</h3>
+          <p class="font-semibold text-gray-800 mb-1">UIT, HPU Shimla</p>
+          <p class="text-gray-600 mb-2">Shimla, Himachal Pradesh</p>
+          <p class="text-gray-500">Graduated: August 2024</p>
+        </div>
+      </div>
+    </section>
 
-    <!-- JavaScript -->
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+    <!-- Skills -->
+    <section id="skills" class="scroll-mt-20 bg-[#fefce8] p-6 rounded-lg" data-aos="fade-up">
+      <h2 class="section-title text-3xl font-bold mb-6">Technical Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="card p-4 text-center"><i class="fab fa-java fa-3x text-blue-500 mb-2"></i><p>Java</p></div>
+        <div class="card p-4 text-center"><i class="fab fa-python fa-3x text-blue-500 mb-2"></i><p>Python</p></div>
+        <div class="card p-4 text-center"><i class="fas fa-c fa-3x text-blue-500 mb-2"></i><p>C++</p></div>
+        <div class="card p-4 text-center"><i class="fab fa-html5 fa-3x text-orange-500 mb-2"></i><p>HTML</p></div>
+        <div class="card p-4 text-center"><i class="fab fa-css3-alt fa-3x text-blue-500 mb-2"></i><p>CSS</p></div>
+        <div class="card p-4 text-center"><i class="fab fa-js-square fa-3x text-yellow-500 mb-2"></i><p>JavaScript</p></div>
+        <div class="card p-4 text-center"><i class="fab fa-react fa-3x text-cyan-500 mb-2"></i><p>React</p></div>
+        <div class="card p-4 text-center"><i class="fas fa-database fa-3x text-green-500 mb-2"></i><p>SQL/MySQL</p></div>
+        <div class="card p-4 text-center"><i class="fas fa-network-wired fa-3x text-gray-700 mb-2"></i><p>Networking</p></div>
+        <div class="card p-4 text-center"><i class="fas fa-shield-halved fa-3x text-red-500 mb-2"></i><p>Cybersecurity</p></div>
+      </div>
+    </section>
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+    <!-- Projects -->
+    <section id="projects" class="scroll-mt-20 bg-[#ecfdf5] p-6 rounded-lg" data-aos="fade-up">
+      <h2 class="section-title text-3xl font-bold mb-6">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card p-6">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">E-commerce Website</h3>
+          <p class="text-gray-700 mb-4">Developed a fully functional e-commerce website using React, HTML, and CSS with cart, auth, and admin panel features.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">React</span>
+            <span class="bg-orange-100 text-orange-800 text-sm font-medium px-2.5 py-0.5 rounded">HTML</span>
+            <span class="bg-sky-100 text-sky-800 text-sm font-medium px-2.5 py-0.5 rounded">CSS</span>
+          </div>
+        </div>
+        <div class="card p-6">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Network Security Simulation</h3>
+          <p class="text-gray-700 mb-4">Simulated a secure network with firewalls, VPNs, and IDS via Packet Tracer, complete with documentation and policy overview.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-gray-100 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Packet Tracer</span>
+            <span class="bg-red-100 text-red-800 text-sm font-medium px-2.5 py-0.5 rounded">Security</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="scroll-mt-20 bg-[#f0f9ff] p-6 rounded-lg" data-aos="fade-up">
+      <h2 class="section-title text-3xl font-bold mb-6">Get In Touch</h2>
+      <div class="card p-6 text-center space-y-4">
+        <p class="text-lg text-gray-700">I'm open to collaborating on exciting projects or internships. Let's connect!</p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="mailto:kittykk1427@gmail.com" class="flex items-center text-gray-600 hover:text-blue-600 transition">
+            <i class="fas fa-envelope fa-lg mr-2"></i><span>ki******7@gmail.com</span>
+          </a>
+          <a href="tel:+918278714266" class="flex items-center text-gray-600 hover:text-blue-600 transition">
+            <i class="fas fa-phone fa-lg mr-2"></i><span>+91 82*******6</span>
+          </a>
+        </div>
+        <div class="flex justify-center gap-6 pt-4">
+          <a href="https://github.com/yourusername" target="_blank" class="text-gray-600 hover:text-black text-2xl">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-gray-600 hover:text-blue-700 text-2xl">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p>&copy; 2024 Kritika Thakur. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
         });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-    </script>
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
